@@ -1,4 +1,7 @@
+#pragma once
+
 #include <cstdint>
+#include <compare>
 #include <string_view>
 
 namespace lzh {
@@ -6,7 +9,7 @@ namespace lzh {
  * this class is mainly for being able to write
  * hello<"hello"> in template arguments
  * */
-template<size_t N>
+template<unsigned N>
 struct fixed_string {
     char buf[N + 1]{};
 
@@ -20,7 +23,7 @@ struct fixed_string {
     auto operator<=>(const fixed_string&) const = default;
 };
 
-template<size_t N>
+template<unsigned N>
 fixed_string(char const (&)[N]) -> fixed_string<N - 1>;
 
 } // namespace lzh

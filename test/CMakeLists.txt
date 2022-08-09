@@ -15,6 +15,7 @@ add_executable(
     hello_test
     hello_test.cpp
     expected_test.cpp
+    fixed_string_test.cpp
 )
 
 target_link_libraries(

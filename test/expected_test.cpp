@@ -1,18 +1,14 @@
-#include <expected.hpp>
 #include <gtest/gtest.h>
+#include "expected.hpp"
 
 namespace {
 
 struct sm_test_error {
-    const char* what() {
-        return "test error value";
-    }
+    const char* what() { return "test error value"; }
 };
 
 struct lg_test_error {
-    const char* what() {
-        return "test error value";
-    }
+    const char* what() { return "test error value"; }
     char arr[100];
 };
 

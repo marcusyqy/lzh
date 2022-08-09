@@ -1,7 +1,7 @@
 #pragma once
 
-#include "lzdef.hpp"
 #include <cstddef>
+#include "lzdef.hpp"
 
 namespace lzh {
 

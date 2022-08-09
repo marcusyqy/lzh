@@ -118,16 +118,6 @@ public:
         std::swap(value_, other.value_);
     }
 
-    // expected& operator=(const unexpected_type& other) noexcept {
-    //     value_ = other.value_;
-    //     return *this;
-    // }
-    //
-    // expected& operator=(unexpected_type&& other) noexcept {
-    //     return (*this ? (void)*this = other : std::swap(value_,
-    //     other.error())), *this;
-    // }
-
     template<typename OtherError>
     expected& operator=(const unexpected<OtherError>& other) noexcept {
         value_ = other.value_;
